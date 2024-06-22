@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mapper.OrderMapper">
+    <!--映射查询结果集-->
+    <resultMap id="orderMap" type="com.pojo.Dealing">
+        <result property="oid" column="id"/>
+        <result property="orderUUid" column="orderUUid"/>
+        <result property="createTime" column="createTime"/>
+        <result property="state" column="state"/>
+        <collection property="address" ofType="com.pojo.Address">
+            <result property="city" column="city"></result>
+            <result property="phone" column="phone"></result>
+            <result property="name" column="name"></result>
+            <result property="detail" column="detail"></result>
+        </collection>
+    </resultMap>
+
+    <!--映射查询结果集-->
+    <resultMap id="HistoricalDealingMap" type="com.pojo.HistoricalDealing">
+        <id property="cid" column="cid"/>
+        <result property="name" column="oldCname"/>
+        <result property="price" column="oldPrice"/>
+        <result property="status" column="status"/>
+        <result property="tracking" column="tracking"/>
+    </resultMap>
+    <select id="viewUserOrderListByUid" parameterType="integer" resultMap="orderMap">
+        SELECT
+            o.id,
+            orderUUid,
+            createTime,
+            state,
+            a.city,
+            a.detail,
+            a.phone,
+            a.`name`
+        FROM
+            `ordergoods` AS o,
+            `address` AS a
+        WHERE
+            a.id = o.aid
+        AND o.uid = #{uid}
+        ORDER BY o.id DESC
+    </select>
+
+    <select id="selectDealingByOid" parameterType="integer" resultMap="HistoricalDealingMap">
+        SELECT
+        DISTINCT
+            cid,
+            oldCname,
+            oldPrice,
+            `status`,
+            tracking
+        FROM
+            `dealing`
+        where
+            oid=#{oid}
+    </select>
+
+    <select id="viewOrderByState" parameterType="integer" resultType="com.pojo.OrderGoods">
+        SELECT
+           *
+        FROM
+            `ordergoods`
+        <where>
+
+            <if test="_parameter!=null">
+                and state=#{state}
+            </if>
+        </where>
+        order by id desc
+    </select>
+
+    <update id="updateOrderStatusByOid">
+        UPDATE dealing
+        SET STATUS = #{status},
+         tracking = #{tracking}
+        WHERE
+            cid = #{cid}
+        AND `status` != 9
+        AND oid = #{oid};
+    </update>
+</mapper>

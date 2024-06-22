@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mapper.UserMapper">
+    <!--映射查询结果集-->
+    <resultMap id="favoriteMap" type="com.pojo.Favorite">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="cid" column="cid"/>
+        <result property="description" column="description"/>
+        <result property="oldPrice" column="oldPrice"/>
+        <result property="photoUrl" column="photoUrl"/>
+        <result property="createTime" column="createTime"/>
+    </resultMap>
+    <!--resultMap:引用映射-->
+    <select id="selectFavoriteByUid" parameterType="integer" resultMap="favoriteMap">
+        SELECT
+            f.id ,
+            f.cid,
+            f.oldPrice,
+            c.photoUrl,
+            c.`name`,
+            c.description,
+            f.createTime
+        FROM
+            `favorite` f
+        LEFT JOIN `commodity` c ON f.cid = c.id
+        WHERE uid=#{uid};
+    </select>
+
+
+</mapper>

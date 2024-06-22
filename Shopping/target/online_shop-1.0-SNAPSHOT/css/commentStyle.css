@@ -1,0 +1,88 @@
+/* 整个宽度 width */
+.commentBlock{
+    margin: 0 auto;
+    width: 300px;
+    position: relative;font-family: "bodoni mt";
+    color: white;
+}
+header{
+    padding: 5px 0;
+    border-bottom: 1px solid #cecece;
+}
+header span{
+    display:inline-block;
+    width: 220px;
+    height: 50px; color: #fff;
+    background: #009966;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+/* 评论前填写的部分 */
+.post{
+    position: absolute;
+    background: #ffffff;
+    border: 1px #999999 solid;
+    width: 300px;
+    top:70px; padding: 10px;
+    font-size: 14px;
+    z-index: 999999;
+    display: none;
+}
+/*修饰发布字体、内容这部分*/
+.post .writeCommentContent{
+    width: 300px;
+    height:30px;
+    line-height: 30px;
+    display: block;
+    border: 1px #aaaaaa solid;
+    margin-bottom: 10px;
+}
+/* “发布”字体 */
+.post .btn{
+    width: 160px;
+    height: 35px;
+    color: #fff;
+    background: #009966;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.commentBlock section ul li{
+    padding: 10px 0;
+    border-bottom: 1px #999999 dashed;
+    overflow: hidden;
+}
+/*头像栏*/
+.commentBlock section ul li div{
+    float: left;
+    width: 50px;
+    margin-right: 10px;
+}
+/* 网名栏 */
+.bbs section ul li div span{
+    float: left;
+    width: 150px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+/*图片显示*/
+.commentBlock section ul li div img{
+    border-radius:50%;
+    width: 40px;
+}
+/*评论内容*/
+.commentBlock section ul li h1{
+    float: left;
+    width: 300px;
+    font-size: 16px;
+    line-height: 35px;
+}
