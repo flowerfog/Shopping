@@ -280,7 +280,15 @@ public class UserController {
         return "redirect:/initShopping";
     }
     @RequestMapping("/toWithAdmin")
-    public String toWithAdmin(){
+    public String toWithAdmin(HttpSession session){
+        User user = (User)session.getAttribute("user");
+
+        if (user == null)
+        {
+            session.setAttribute("msg","您还未登录，请先登录后再联系我们");
+            return "redirect:/login.jsp";
+        }
+
         return "redirect:/blank.jsp";
     }
 
@@ -357,9 +365,14 @@ public class UserController {
     }
 
     @RequestMapping("addMyMoney")
-    public String addMyMoney()
+    public String addMyMoney(HttpSession session)
     {
-
+        User user = (User)session.getAttribute("user");
+        if (user == null)
+        {
+            session.setAttribute("msg","您还未登录,请登录后再进行充值");
+            return "redirect:/login.jsp";
+        }
         return"redirect:/addmoney.jsp";
     }
 }

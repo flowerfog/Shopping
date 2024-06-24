@@ -212,7 +212,7 @@
 						<img src="./img/shop01.png" alt="">
 					</div>
 					<div class="shop-body">
-						<h3>联想<br>小新pro14</h3>
+						<h3>华硕ASUS<br>天选4</h3>
 						<a href="${pageContext.request.contextPath}/commodity/viewCommodityByCid?cid=8" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
 					</div>
 				</div>

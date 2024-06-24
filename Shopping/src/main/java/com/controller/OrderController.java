@@ -145,6 +145,11 @@ public class OrderController {
     @RequestMapping("/toUserOrderListByUid")
     public String toUserOrderList(HttpSession session,Model model){
         User user = (User) session.getAttribute("user");
+        if(user == null)
+        {
+            session.setAttribute("msg","您还未登录！请先登陆,再查看订单的细节");
+            return"redirect:/login.jsp";
+        }
         List<Dealing> dealingList = orderService.viewUserOrderListByUid(user.getId(),session);
         for (Dealing dealing : dealingList) {
             Integer id = dealing.getOid();

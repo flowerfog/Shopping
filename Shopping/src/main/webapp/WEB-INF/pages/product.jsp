@@ -59,7 +59,7 @@
 	<div id="top-header">
 		<div class="container">
 			<ul class="header-links pull-left">
-				<li><a href="#"><i class="fa fa-phone"></i> +173-3862-9421</a></li>
+				<li><a href="#"><i class="fa fa-phone"></i> +173-2358-0528</a></li>
 				<li><a href="#"><i class="fa fa-map-marker"></i> CQIE Sakural Road</a></li>
 			</ul>
 			<ul class="header-links pull-right">
@@ -427,7 +427,7 @@
 												<ul class="reviews">
 													<li>
 														<div class="review-heading">
-															<h5 class="name">代文豪</h5>
+															<h5 class="name">dwh</h5>
 															<p class="date">21 June 2024, 8:0 PM</p>
 															<div class="review-rating">
 																<i class="fa fa-star"></i>
@@ -443,7 +443,7 @@
 													</li>
 													<li>
 														<div class="review-heading">
-															<h5 class="name">代文豪</h5>
+															<h5 class="name">dwh</h5>
 															<p class="date">27 DEC 2018, 8:0 PM</p>
 															<div class="review-rating">
 																<i class="fa fa-star"></i>
@@ -459,7 +459,7 @@
 													</li>
 													<li>
 														<div class="review-heading">
-															<h5 class="name">代文豪</h5>
+															<h5 class="name">dwh</h5>
 															<p class="date">27 DEC 2077, 8:0 PM</p>
 															<div class="review-rating">
 																<i class="fa fa-star"></i>

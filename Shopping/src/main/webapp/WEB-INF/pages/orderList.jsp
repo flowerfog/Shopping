@@ -59,7 +59,7 @@
     <div id="top-header">
         <div class="container">
             <ul class="header-links pull-left">
-                <li><a href="#"><i class="fa fa-phone"></i> +173-3862-9421</a></li>
+                <li><a href="#"><i class="fa fa-phone"></i> +173-2358-0528</a></li>
                 <li><a href="#"><i class="fa fa-map-marker"></i> CQIE Sakural Road</a></li>
             </ul>
             <ul class="header-links pull-right">
