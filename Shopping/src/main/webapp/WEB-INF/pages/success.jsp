@@ -63,7 +63,7 @@
     <div id="top-header">
         <div class="container">
             <ul class="header-links pull-left">
-                <li><a href="#"><i class="fa fa-phone"></i> +173-3862-9421</a></li>
+                <li><a href="#"><i class="fa fa-phone"></i> +173-2358-0528</a></li>
                 <li><a href="#"><i class="fa fa-map-marker"></i> CQIE Sakural Road</a></li>
             </ul>
             <ul class="header-links pull-right">
@@ -300,8 +300,8 @@
                         <h3 class="footer-title">About Us</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
                         <ul class="footer-links">
-                            <li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
-                            <li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
+                            <li><a href="#"><i class="fa fa-map-marker"></i>173 Stonecoal Road</a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i>+114-514-19-19</a></li>
                             <li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
                         </ul>
                     </div>

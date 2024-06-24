@@ -55,7 +55,7 @@
 	<div id="top-header">
 		<div class="container">
 			<ul class="header-links pull-left">
-				<li><a href="#"><i class="fa fa-phone"></i> +173-3862-9421</a></li>
+				<li><a href="#"><i class="fa fa-phone"></i> +173-2358-0528</a></li>
 				<li><a href="#"><i class="fa fa-map-marker"></i> CQIE Sakural Road</a></li>
 			</ul>
 			<ul class="header-links pull-right">
@@ -181,7 +181,7 @@
 		<div class="row">
 			<div class="col-md-7">
 				<h3 class="title">保持联系</h3>
-				<form class="contact-form">
+				<form class="contact-form" action="${pageContext.request.contextPath}/user/adviceSubmit" method="post">
 					<div class="form-group">
 						<input class="input" type="text" name="name" placeholder="您的姓名" required>
 					</div>
@@ -200,11 +200,11 @@
 			<div class="col-md-5 contact-info">
 				<h3 class="title">联系信息</h3>
 				<p>如果您有任何问题，请随时与我们联系。我们在这里为您提供帮助。</p>
-				<p><strong>地址：</strong> CQIE樱花路</p>
-				<p><strong>电话：</strong> +173-3862-9421</p>
-				<p><strong>邮箱：</strong> info@electroecommerce.com</p>
+				<p><strong>地址：</strong> CQIE樱花大道</p>
+				<p><strong>电话：</strong> +173-2358-0528</p>
+				<p><strong>邮箱：</strong> 2252221508@qq.com</p>
 				<div id="contact-map">
-					<!-- 如果需要，可以在此处添加Google地图iframe -->
+
 				</div>
 			</div>
 		</div>
@@ -224,8 +224,8 @@
 						<p>Electro Ecommerce is your go-to destination for electronics shopping, offering a wide range of products from top brands.</p>
 						<ul class="footer-links">
 							<li><a href="#"><i class="fa fa-map-marker"></i> CQIE Sakural Road</a></li>
-							<li><a href="#"><i class="fa fa-phone"></i> +173-3862-9421</a></li>
-							<li><a href="#"><i class="fa fa-envelope-o"></i> info@electroecommerce.com</a></li>
+							<li><a href="#"><i class="fa fa-phone"></i> +173-2358-0528</a></li>
+							<li><a href="#"><i class="fa fa-envelope-o"></i> 2252221508@qq.com</a></li>
 						</ul>
 					</div>
 				</div>

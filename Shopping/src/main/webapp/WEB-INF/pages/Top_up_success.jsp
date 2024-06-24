@@ -39,7 +39,7 @@
         var num=10;
         function fun(){
             if(num==1){
-                location.href="${pageContext.request.contextPath}/order/toUserOrderListByUid";
+                location.href="${pageContext.request.contextPath}/index.jsp";
             }
             num--;
             var span=document.getElementById("d1");
@@ -239,12 +239,12 @@
 <div class="container" style="overflow-x:hidden;overflow-y:auto; height: 450px">
     <br>
     <center>
-        <h1>购买成功(恭喜你,本次购入价值<span style="color: red;">${orderPrice}</span>元的商品)</h1><h3><a href="${pageContext.request.contextPath}/order/toUserOrderListByUid"> 点击查看订单详情 </a></h3>
+        <h1>成功成功(恭喜你,本次充值<span style="color: red;">${amount}</span>元)</h1>
     </center>
     <br>
     <br>
     <br>
-    <div style="float: right;"><h3><span id="d1" style="color: red;">10</span>秒后自动跳转订单详情页</h3></div>
+    <div style="float: right;"><h3><span id="d1" style="color: red;">10</span>秒后自动跳转首页</h3></div>
 
 </div>
 
@@ -300,8 +300,8 @@
                         <h3 class="footer-title">About Us</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
                         <ul class="footer-links">
-                            <li><a href="#"><i class="fa fa-map-marker"></i>173 Stonecoal Road</a></li>
-                            <li><a href="#"><i class="fa fa-phone"></i>+114-514-19-19</a></li>
+                            <li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
                             <li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
                         </ul>
                     </div>

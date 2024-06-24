@@ -64,13 +64,19 @@ public class UserController {
         }
         if (user != null && amount > 0) {
             userService.updateMoney(amount,user.getId());
-            session.setAttribute("user", user.getId()); // 更新 session 中的用户信息
+            session.setAttribute("user", user); // 更新 session 中的用户信息
+            model.addAttribute("amount",amount);
             model.addAttribute("addRes", "充值成功！");
         } else {
             model.addAttribute("addRes", "充值失败，请重试！");
         }
 
-        return "redirect:/user/addMyMoney";
+        return "Top_up_success";
+    }
+
+    @PostMapping("adviceSubmit")
+    public String processRecharge() {
+        return "submit_success";
     }
     @RequestMapping("/doRegister")
     public String doRegister(User user,HttpSession session){
@@ -78,8 +84,9 @@ public class UserController {
         user.setCode(uuid);
         userMapper.addUser(user);
         String email = user.getEmail();
+        System.out.println(uuid);
         String title="激活账号";
-        String content="您正在进行Electro商城的注册,下一步:<a href='http://localhost:8080/user/setStatus?code="+uuid+"'>点我激活</a>";
+        String content="您正在进行Electro商城的注册,下一步:<a href='http://localhost:8086/user/setStatus?code="+uuid+"'>点我激活</a>";
         MailUtils.sendMail(email,content,title);
         session.setAttribute("msg","账户已经注册,下一步请前往填写邮箱激活账号");
         return"redirect:/login.jsp";
