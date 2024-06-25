@@ -68,7 +68,7 @@ public final class MailUtils {
     }
 
     public static void main(String[] args) throws Exception { // 做测试用
-        MailUtils.sendMail("2252221508@qq.com","你好，这是一封测试邮件，无需回复。","测试邮件");
+        MailUtils.sendMail("2252221580@qq.com","你好，这是一封测试邮件，无需回复。","测试邮件");
         System.out.println("send success");
     }
 
